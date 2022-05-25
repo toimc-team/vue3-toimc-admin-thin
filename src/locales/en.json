@@ -1,0 +1,28 @@
+{
+  "Header": {
+    "CustomHeader": {
+      "quit": "Exit"
+    }
+  },
+  "menu": {
+    "home": "Home",
+    "overview": "Overview",
+    "dashboard": "Dashboard",
+    "about": {
+      "about-us": "AboutUs",
+      "title": "About"
+    }
+  },
+  "components": {
+    "editor": {
+      "milkdown": {
+        "heading": "标题",
+        "large-heading": "Large Heading",
+        "medium-heading": "Medium Heading",
+        "small-heading": "Small Heading",
+        "plain-text": "Plain Text"
+      }
+    }
+  },
+  "test": "test"
+}
