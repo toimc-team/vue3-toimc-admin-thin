@@ -296,6 +296,16 @@
 <style lang="scss">
   $radius: 4px;
 
+  @keyframes slidetounlock {
+    0% {
+      background-position: -120px 0;
+    }
+
+    100% {
+      background-position: 120px 0;
+    }
+  }
+
   .darg-verify {
     position: relative;
     overflow: hidden;
@@ -364,16 +374,6 @@
         left: 0 !important;
         transition: left 0.3s;
       }
-    }
-  }
-
-  @keyframes slidetounlock {
-    0% {
-      background-position: -120px 0;
-    }
-
-    100% {
-      background-position: 120px 0;
     }
   }
 </style>

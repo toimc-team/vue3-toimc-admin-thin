@@ -3,8 +3,11 @@
     <div :class="['layout-' + layout, 'layout-mode-' + layoutMode, 'h-full']">
       <sider-bar v-if="layoutMode === 'row'" :collapse="isCollapse"></sider-bar>
       <div
-        class="layout-main-wrap relative  flex-1 h-full"
-        :class="[fixHeader !== true ? 'overflow-auto':'overflow-hidden', { 'w-0': layout !== 'top' }]"
+        class="layout-main-wrap relative flex-1 h-full"
+        :class="[
+          fixHeader !== true ? 'overflow-auto' : 'overflow-hidden',
+          { 'w-0': layout !== 'top' }
+        ]"
       >
         <div class="layout-header">
           <div class="nav">
@@ -21,7 +24,7 @@
         </div>
         <div :class="['layout-main', { 'fixed-header-main': fixHeader === true }]">
           <el-scrollbar class="custom-scroll">
-            <router-view></router-view>
+            <r-view></r-view>
           </el-scrollbar>
         </div>
       </div>
@@ -76,26 +79,31 @@
   .layout-wrap {
     background-color: var(--el-bg-page);
   }
+
   .layout-main-wrap > .layout-main {
     margin-top: v-bind(headerHeight);
-    &.fixed-header-main{
-      height: calc(100% - (v-bind(headerHeight)))
+
+    &.fixed-header-main {
+      height: calc(100% - (v-bind(headerHeight)));
     }
   }
+
   .layout-header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1;
-    box-shadow: var(--el-box-shadow-light);
+    width: 100%;
     background-color: var(--el-bg-color);
+    box-shadow: var(--el-box-shadow-light);
   }
+
   .tabs {
     background-color: var(--el-bg-color);
     border-top: 1px solid var(--el-border-color);
     user-select: none;
   }
+
   :deep(.el-menu) {
     border: none;
   }
@@ -109,8 +117,14 @@
   .layout-mode-column {
     .layout-main {
       width: 92%;
-      margin-left: auto;
       margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  .custom-scroll {
+    :deep(.el-scrollbar__view) {
+      height: 100%;
     }
   }
 </style>

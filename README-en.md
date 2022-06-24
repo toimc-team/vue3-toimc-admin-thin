@@ -1,19 +1,19 @@
-# vue-toimc-admin
+# vue-toimc-admin-thin
 
 [中文](./README.md) | English
 
-<div align="center"> <a href="https://github.com/toimc-team/vue3-toimc-admin-thin"> <img alt="Toimc Logo" width="360" height="100" src="https://toimc-online.obs.cn-east-3.myhuaweicloud.com/logo.png"> </a> <br> <br>
+<div align="center"> <a href="https://github.com/toimc-team/vue3-toimc-admin"> <img alt="Toimc Logo" width="360" height="100" src="https://toimc-online.obs.cn-east-3.myhuaweicloud.com/logo.png"> </a> <br> <br>
 </div>
 
 > Vue 3.0 + TypeScript + Vite + Element-plus based administration backend project
 >
 > Rich base components and business functional components, 100% more efficient
 
-[![license](https://img.shields.io/github/license/toimc-team/vue3-toimc-admin-thin.svg)](LICENSE) ![GitHub package.json version](https://img.shields.io/github/package-json/v/toimc-team/vue3-toimc-admin-thin) ![Github issues](https://img.shields.io/github/issues/toimc-team/vue3-toimc-admin-thin) ![](https://img.shields.io/badge/Vue-%5E3.2.31-brightgreen) ![element-plus](https://img.shields.io/badge/element--plus-2.x-orange) ![vite](https://img.shields.io/badge/vite-%5E2.9.0-yellowgreen)
+[![license](https://img.shields.io/github/license/toimc-team/vue3-toimc-admin.svg)](LICENSE) ![GitHub package.json version](https://img.shields.io/github/package-json/v/toimc-team/vue3-toimc-admin) ![Github issues](https://img.shields.io/github/issues/toimc-team/vue3-toimc-admin) ![](https://img.shields.io/badge/Vue-%5E3.2.31-brightgreen) ![element-plus](https://img.shields.io/badge/element--plus-2.x-orange) ![vite](https://img.shields.io/badge/vite-%5E2.9.0-yellowgreen)
 
 Hello, guys, we are the toimc open source project team, in this article we will briefly introduce the current phase of our open source project planning, to help you to understand our open source plans, to understand our team.
 
-Domestic mirror site: [https://gitee.com/toimc-team/vue3-toimc-admin-thin](https://gitee.com/toimc-team/vue3-toimc-admin-thin)
+Domestic mirror site: [https://gitee.com/toimc-team/vue3-toimc-admin](https://gitee.com/toimc-team/vue3-toimc-admin)
 
 ## Origins
 
@@ -112,7 +112,7 @@ We are also building a documentation site for our open source project, and hope 
 
 The whole open source team has been formed, including product, development, operations a total of 8 people of partners, every day the partners are happy to discuss technical.
 
-Plan progress: [Github issues label: Plan](https://github.com/toimc-team/vue3-toimc-admin-thin/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+ label%3Aplan)
+Plan progress: [Github issues label: Plan](https://github.com/toimc-team/vue3-toimc-admin/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+ label%3Aplan)
 
 ### Future planning
 
@@ -128,6 +128,7 @@ Talent requirements.
 - Operation: copywriting, shake, community
 
 mail: admin@wayearn.com
+
 ## How to contribute
 
 - Join the WeChat group
@@ -137,11 +138,11 @@ mail: admin@wayearn.com
   - arco: https://react-pro.arco.design/dashboard/monitor
   - Naive: https://naive-ui-admin.vercel.app/#/dashboard/console
 - See if there are plans and discussions in issues.
-  - Plan: [enhancement](https://github.com/toimc-team/vue3-toimc-admin-thin/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
-  - Discussion: [discussion](https://github.com/toimc-team/vue3-toimc-admin-thin/issues?q=is%3Aissue+is%3Aopen+label%3Adiscussion)
+  - Plan: [enhancement](https://github.com/toimc-team/vue3-toimc-admin/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+  - Discussion: [discussion](https://github.com/toimc-team/vue3-toimc-admin/issues?q=is%3Aissue+is%3Aopen+label%3Adiscussion)
 - (not required) create your own issues and join the project
 - Download the project, coding, test~~
-- PR: [here](https://github.com/toimc-team/vue3-toimc-admin-thin/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)
+- PR: [here](https://github.com/toimc-team/vue3-toimc-admin/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)
 - Wait for review, merge~~
 
 ## Donate

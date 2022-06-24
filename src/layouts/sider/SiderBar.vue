@@ -1,5 +1,11 @@
 <template>
-  <div class="transition-all duration-300" :style="{ width: menuWidth }">
+  <div
+    :class="[
+      'transition-all duration-300 bg-center bg-no-repeat bg-cover',
+      { transparent: backgroundImg !== '' }
+    ]"
+    :style="{ width: menuWidth, backgroundImage: 'url(' + backgroundImg + ')' }"
+  >
     <div class="logo-wrap flex items-center justify-center py-3 px-3 h-60px">
       <img class="max-h-full" src="@/assets/images/logo.png" />
     </div>
@@ -125,7 +131,8 @@
         allMenu,
         topMenu,
         mainMenu,
-        menuClassName
+        menuClassName,
+        backgroundImg: computed(() => store.$state.backgroundImg)
       }
     }
   })
@@ -135,32 +142,37 @@
   .logo-wrap {
     background-color: var(--logo-bg-color);
   }
+
   .side-top-menu-wrap {
     background-color: var(--topside-menu-bg-color);
+
     :deep(.el-menu) {
-      background-color: var(--topside-menu-bg-color);
-      color: var(--topside-menu-text-color);
       padding: 0 3px;
+      color: var(--topside-menu-text-color);
+      background-color: var(--topside-menu-bg-color);
+
       .el-menu-item {
-        color: var(--topside-menu-text-color);
         padding: 0 6px !important;
         font-size: 14px;
         line-height: unset;
+        color: var(--topside-menu-text-color);
+        border-radius: 4px;
         flex-direction: column;
         justify-content: center;
-        border-radius: 4px;
 
         .menu-icon {
           margin-right: 0;
           margin-bottom: 1px;
         }
+
         &:hover {
-          background-color: var(--side-main-menu-bg-hover-color);
           color: var(--side-main-menu-text-hover-color);
+          background-color: var(--side-main-menu-bg-hover-color);
         }
+
         &.is-active {
-          background-color: var(--side-main-menu-active-bg-color);
           color: var(--side-main-menu-active-text-color);
+          background-color: var(--side-main-menu-active-bg-color);
         }
       }
     }
@@ -168,19 +180,23 @@
 
   .side-main-menu-wrap {
     background-color: var(--side-main-menu-bg-color);
+
     :deep(.el-menu) {
-      background-color: var(--side-main-menu-bg-color);
       color: var(--side-main-menu-text-color);
+      background-color: var(--side-main-menu-bg-color);
+
       .el-menu-item,
       .el-sub-menu__title {
-        background-color: var(--side-main-menu-bg-hover-color);
         color: var(--side-main-menu-text-color);
+        background-color: var(--side-main-menu-bg-hover-color);
+
         &:hover {
           color: var(--side-main-menu-text-hover-color);
         }
+
         &.is-active {
-          background-color: var(--side-main-menu-active-bg-color);
           color: var(--side-main-menu-active-text-color);
+          background-color: var(--side-main-menu-active-bg-color);
         }
       }
     }
@@ -190,21 +206,53 @@
     background-color: var(--side-sub-menu-bg-color);
 
     :deep(.el-menu) {
-      background-color: var(--side-sub-menu-bg-color);
       color: var(--side-sub-menu-text-color);
+      background-color: var(--side-sub-menu-bg-color);
+
       .el-menu-item,
       .el-sub-menu__title {
-        background-color: var(--side-sub-menu-bg-hover-color);
         color: var(--side-sub-menu-text-color);
+        background-color: var(--side-sub-menu-bg-hover-color);
+
         &:hover {
           color: var(--side-sub-menu-text-hover-color);
         }
+
         &.is-active {
-          background-color: var(--side-sub-menu-active-bg-color);
-          color: var(--side-sub-menu-active-text-color);
-          border-radius: 5px;
-          padding: 0;
           min-width: unset;
+
+          // padding: 0;
+          color: var(--side-sub-menu-active-text-color);
+          background-color: var(--side-sub-menu-active-bg-color);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .transparent {
+    .logo-wrap {
+      background-color: transparent !important;
+    }
+
+    .side-main-menu-wrap {
+      background-color: transparent !important;
+
+      :deep(.el-menu) {
+        background-color: transparent;
+
+        .el-menu-item,
+        .el-sub-menu__title {
+          color: #fff;
+          text-shadow: 0 5px 8px rgb(0 0 0 / 20%);
+          background-color: transparent;
+
+          &.is-active {
+            font-weight: bold;
+
+            // padding: 0;
+            color: var(--side-sub-menu-active-bg-color);
+          }
         }
       }
     }

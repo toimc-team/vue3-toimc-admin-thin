@@ -4,7 +4,7 @@
       <div class="h-full relative">
         <h2
           class="truncate flex flex-wrap justify-center items-center"
-          style="font-size: 0.7em; height: 30%"
+          style="height: 30%; font-size: 0.7em"
           :style="{ backgroundColor, color: fontColor }"
           >{{ title }}</h2
         >

@@ -13,7 +13,11 @@ const sysTheme = {
   // 菜单宽度
   menuWidth: '266px',
   // 显示tab page
-  tabPage: true
+  tabPage: true,
+  // 切换动画
+  transitionName: 'Fade',
+  // 背景图片
+  backgroundImg: ''
 }
 
 export default sysTheme

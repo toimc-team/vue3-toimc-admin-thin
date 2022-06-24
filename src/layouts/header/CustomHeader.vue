@@ -121,7 +121,7 @@
       function handleClickQuit() {
         userStore.clearUserInfo()
         store.visitedRoutes = []
-        router.push('/login/pwd')
+        router.replace('/login/pwd')
       }
 
       watch(
@@ -162,8 +162,8 @@
 
 <style lang="scss" scoped>
   .nav {
-    background-color: var(--el-bg-color);
     color: var(--el-text-color-primary);
+    background-color: var(--el-bg-color);
   }
 
   .items {

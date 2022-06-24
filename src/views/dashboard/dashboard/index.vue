@@ -104,21 +104,27 @@
         />
       </el-col>
     </el-row>
+    <el-row>
+      <el-col :span="24">
+        <board-table />
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
   import DashboardCard from './components/card/index.vue'
   import EchartsBoard from './components/board/index.vue'
-  // import { DescItem } from '@/components/Descriptions/types'
+  import BoardTable from './components/table/index.vue'
+
   import Mock from 'mockjs'
 
   export default defineComponent({
     name: 'DashBoard',
     components: {
       DashboardCard,
-      EchartsBoard
+      EchartsBoard,
+      BoardTable
     },
     setup() {
       const end1 = Mock.mock('@float(100, 50000, 2, 2)')
@@ -131,20 +137,33 @@
         end3,
         end4
       }
+    },
+    activated() {
+      // called on initial mount
+      // and every time it is re-inserted from the cache
+      console.log('keep-alive demo, set keepAlive in meta: activated')
+    },
+    deactivated() {
+      // called when removed from the DOM into the cache
+      // and also when unmounted
+      console.log('keep-alive demo: deactivated')
     }
   })
 </script>
 
 <style scoped lang="scss">
-.dashboard-body {
-  width: 100%;
-  padding: 20px;
-  background: #f6f8f9;
-  :deep(.el-row) {
-    margin-bottom: 0.5rem;
-    &:last-child {
-      margin-bottom: 0;
+  .dashboard-body {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #f6f8f9;
+
+    :deep(.el-row) {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
-}
 </style>

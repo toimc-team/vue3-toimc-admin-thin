@@ -6,6 +6,9 @@
     :format-tooltip="formatTooltip"
     :style="style"
     :class="{ 'el-rainbow': rainbow }"
+    :step="step"
+    :max="max"
+    :min="min"
     @change="handleChange"
     @input="handleInput"
   ></el-slider>
@@ -40,6 +43,18 @@
       tooltipVisible: {
         type: Boolean,
         default: false
+      },
+      min: {
+        type: Number,
+        default: 0
+      },
+      max: {
+        type: Number,
+        default: 100
+      },
+      step: {
+        type: Number,
+        default: 1
       }
     },
     emits: ['change', 'input'],
@@ -47,6 +62,7 @@
       const { modelValue } = toRefs(props)
       const elSlider = ref()
       const currentValue = ref(modelValue.value)
+
       const style = computed<CSSProperties>(() => {
         const color = props.color
         const styleObject = {}
@@ -88,7 +104,7 @@
     :deep(.el-slider__bar) {
       background: linear-gradient(
         to right,
-        #ff0000 0%,
+        #f00 0%,
         #ffb600 11%,
         #fff600 22%,
         #a5ff00 33%,
@@ -97,7 +113,7 @@
         #8a00fc 66%,
         #ff00e9 77%,
         #ff0059 88%,
-        #ff0000 100%
+        #f00 100%
       );
     }
   }

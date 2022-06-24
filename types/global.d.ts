@@ -26,6 +26,10 @@ declare global {
     -readonly [P in keyof T]: T[P]
   }
 
+  export type UseKeyAble<A> = {
+    [k in keyof A]: any
+  }
+
   declare type Nullable<T> = T | null
   declare type NonNullable<T> = T extends null | undefined ? never : T
   declare type Recordable<T = any> = Record<string, T>
@@ -49,7 +53,6 @@ declare global {
     VITE_GLOB_APP_SHORT_NAME: string
     VITE_GLOB_CONFIG_FILE_NAME: string
     VITE_GLOB_API_URL: string
-    VITE_USE_CDN: boolean
     VITE_DROP_CONSOLE: boolean
     VITE_HTTPS: boolean
     VITE_LEGACY: boolean
